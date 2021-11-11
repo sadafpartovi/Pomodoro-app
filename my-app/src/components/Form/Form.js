@@ -35,7 +35,7 @@ const Form = ({setPomodoro, setShort, setLong}) => {
        <div className='purple'></div>
      </div>
 
-     <button>Apply</button>
+     <button className='applyBtn'>Apply</button>
 
     </div>
 

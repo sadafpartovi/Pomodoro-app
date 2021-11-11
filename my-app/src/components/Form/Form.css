@@ -42,11 +42,11 @@ input {
   background-color: rgb(121, 218, 218);
 }
 
-button {
+.applyBtn {
   background-color: rgb(236, 99, 35);
  padding: .7rem;
  border-radius: 25px;
  color: white;
- 
+
 
 }

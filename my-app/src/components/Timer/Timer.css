@@ -1,0 +1,25 @@
+.timeContainer {
+  margin-top:2rem;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: rgb(5, 5, 32);
+  margin: 0 auto;
+  margin-bottom: 14rem;
+  text-align: center;
+  display: flex; /* or inline-flex */
+  align-items: center;
+  justify-content: center;
+  z-index: 0;
+  border: 8px solid rgb(212, 124, 212);
+  box-shadow: 0 0 0 13px rgb(5, 5, 32);
+
+
+}
+
+.time {
+  font-size: 3rem;
+  text-align: center;
+  font-weight: bolder;
+  z-index: 2;
+}

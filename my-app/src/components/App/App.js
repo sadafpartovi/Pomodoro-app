@@ -2,6 +2,7 @@
 import './App.css';
 import Form from '../Form/Form';
 import { useState } from 'react';
+import Timer from '../Timer/Timer'
 
 
 
@@ -10,6 +11,7 @@ function App() {
   const [pomodoro, setPomodoro] = useState();
   const [shortBreak, setShort] = useState();
   const [longBreak, setLong] = useState()
+
 
   const handleModal = (e) => {
     setShowModa(prev => !prev);
@@ -24,7 +26,10 @@ function App() {
         <p>short break</p>
         <p>long break</p>
       </div>
-      <button onClick={(e) => handleModal(e)}>setting</button>
+
+      <Timer pomodoro={pomodoro} shortBreak={shortBreak} longBreak={longBreak}/>
+
+      <button onClick={(e) => handleModal(e)}><i class="fa fa-cog" aria-hidden="true"></i></button>
       {showModal ? <Form  setPomodoro={setPomodoro} setShort={setShort} setLong={setLong}/> : ''}
     </div>
   );
