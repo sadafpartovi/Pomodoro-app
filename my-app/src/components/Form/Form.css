@@ -1,0 +1,52 @@
+input {
+  background-color: lightgray;
+  display: block;
+}
+
+.italisize {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.orange,
+.blue,
+.purple,
+.italisize,
+.bold,
+.normal {
+  border-radius: 50%;
+  display: inline-block;
+  min-width: 2rem;
+  min-height: 2rem;
+}
+
+.italisize,
+.bold,
+.normal {
+  background-color: rgb(184, 181, 181);
+  color:white;
+  text-align: center;
+}
+
+
+.purple {
+  background-color: rgb(212, 124, 212);
+}
+.orange {
+  background-color: rgb(233, 177, 74);
+}
+.blue {
+  background-color: rgb(121, 218, 218);
+}
+
+button {
+  background-color: rgb(236, 99, 35);
+ padding: .7rem;
+ border-radius: 25px;
+ color: white;
+ 
+
+}
