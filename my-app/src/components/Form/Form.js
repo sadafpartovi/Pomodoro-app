@@ -1,10 +1,8 @@
 import './Form.css'
 import {useState} from 'react';
 
-const Form = () => {
-  const [pomodoro, setPomodoro] = useState();
-  const [shortBreak, setShort] = useState();
-  const [longBreak, setLong] = useState()
+const Form = ({setPomodoro, setShort, setLong}) => {
+
 
 
 

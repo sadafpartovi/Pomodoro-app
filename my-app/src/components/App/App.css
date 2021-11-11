@@ -1,0 +1,23 @@
+
+.App {
+  background-color: rgb(8, 8, 83);
+  color: white;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+h1 {
+  padding: 2rem;
+}
+.appHeader {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  max-width: 500px;
+  background-color: rgb(5, 5, 32);
+  justify-content: space-evenly;
+  margin: 0 auto;
+  padding: 1rem;
+  border-radius: 30px;
+}

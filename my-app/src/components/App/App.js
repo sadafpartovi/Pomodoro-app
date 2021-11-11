@@ -1,13 +1,15 @@
 
 import './App.css';
-
 import Form from '../Form/Form';
 import { useState } from 'react';
-import Modal from '../Modal/Modal';
+
 
 
 function App() {
-  const [showModal, setShowModa] = useState(false)
+  const [showModal, setShowModa] = useState(false);
+  const [pomodoro, setPomodoro] = useState();
+  const [shortBreak, setShort] = useState();
+  const [longBreak, setLong] = useState()
 
   const handleModal = (e) => {
     setShowModa(prev => !prev);
@@ -16,8 +18,14 @@ function App() {
   }
   return (
     <div className="App">
+      <h1>Pomodoro</h1>
+      <div className='appHeader'>
+        <p>pomodoro</p>
+        <p>short break</p>
+        <p>long break</p>
+      </div>
       <button onClick={(e) => handleModal(e)}>setting</button>
-      {showModal ? <Modal /> : ''}
+      {showModal ? <Form  setPomodoro={setPomodoro} setShort={setShort} setLong={setLong}/> : ''}
     </div>
   );
 }
