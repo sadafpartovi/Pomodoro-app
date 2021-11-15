@@ -1,7 +1,7 @@
 import "./Form.css";
 import { useState } from "react";
 
-const Form = ({ setPomodoro, setShort, setLong, setShowModa, handleTheme, theme }) => {
+const Form = ({ setPomodoro, setShort, setLong, setShowModa, handleTheme, theme, handleFont, font }) => {
   return (
     <div className="container">
       <form className="modalBox">
@@ -37,9 +37,9 @@ const Form = ({ setPomodoro, setShort, setLong, setShowModa, handleTheme, theme 
       <hr></hr>
       <h3>FONT</h3>
       <div className="fontContainer">
-        <div className="italisize">Aa</div>
-        <div className="normal">Aa</div>
-        <div className="bold">Aa</div>
+        <div onClick={() => handleFont('italic')}className="italisize">Aa</div>
+        <div onClick={() => handleFont('normal')} className="normal">Aa</div>
+        <div  onClick={() => handleFont('bold')} className="bold">Aa</div>
       </div>
 
       <hr></hr>

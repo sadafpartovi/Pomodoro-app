@@ -17,7 +17,14 @@ function App() {
     color: 'rgb(212, 124, 212)'
   })
 
-  console.log(theme)
+  const [font, setFont] = useState({
+    mode: 'normal',
+    style: 'normal',
+    size: 'normal'
+  })
+
+  console.log(font)
+
 
   const handleTheme = (mode) => {
     if (mode === 'pink') {
@@ -40,6 +47,30 @@ function App() {
      }
   }
 
+  const handleFont = (mode) => {
+    if (mode === 'italic') {
+      setFont({
+        mode: 'italic',
+        style : 'italic',
+        size: 'normal'
+      })
+    }
+    else if (mode === 'bold') {
+      setFont({
+        mode: 'bold',
+        style : 'bold',
+        size: 'bold'
+      })
+    }
+    else if (mode === 'normal') {
+      setFont({
+        mode: 'normal',
+        style : 'normal',
+        size: 'normal'
+      })
+    }
+  }
+
 
   const handleModal = (e) => {
     setShowModa(prev => !prev);
@@ -47,7 +78,7 @@ function App() {
 
   }
   return (
-    <div className="App">
+    <div className="App" style={{'fontStyle': `${font.style}`, 'fontWeight': `${font.size}`}}>
       <h1>Pomodoro</h1>
       <div className='appHeader'>
         <p>pomodoro</p>
@@ -58,7 +89,7 @@ function App() {
       <Timer theme={theme} pomodoro={pomodoro} shortBreak={shortBreak} longBreak={longBreak}/>
 
       <button onClick={(e) => handleModal(e)}><i class="fa fa-cog" aria-hidden="true"></i></button>
-      {showModal ? <Form  setPomodoro={setPomodoro} setShort={setShort} setLong={setLong} setShowModa={setShowModa} handleTheme={handleTheme} them={theme}/>  : ''}
+      {showModal ? <Form  setPomodoro={setPomodoro} setShort={setShort} setLong={setLong} setShowModa={setShowModa} handleTheme={handleTheme} them={theme} handleFont={handleFont} font={font}/>  : ''}
     </div>
   );
 }
