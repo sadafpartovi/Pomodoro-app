@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import "./Timer.css";
-const Timer = ({ pomodoro, shortBreak, longBreak }) => {
+const Timer = ({ pomodoro, shortBreak, longBreak, theme }) => {
   const [initialMinute, setInitialMinute] = useState(10);
   const [initialSecond, setInitialSecond] = useState(0);
   const [min, setMin] = useState(initialMinute);
@@ -24,7 +24,7 @@ const Timer = ({ pomodoro, shortBreak, longBreak }) => {
   });
 
   return (
-    <div className="timeContainer">
+    <div className="timeContainer" style={{'border': `8px solid ${theme.color}`}}>
 
         {min === 0 && seconds === 0 ? null : (
           <h1 className="time">
@@ -33,7 +33,7 @@ const Timer = ({ pomodoro, shortBreak, longBreak }) => {
           </h1>
         )}
       </div>
-    
+
   );
 };
 
